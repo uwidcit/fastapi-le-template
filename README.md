@@ -7,6 +7,18 @@ A template for simple fastapi projects.
 $ python -m venv venv
 ```
 
+# Activating the virtual environment
+
+#### On Mac / Linux
+```bash
+$ source venv/bin/activate
+```
+#### On Windows
+```
+$ venv\Scripts\activate
+```
+
+
 # Installing Dependencies
 ```
 $ pip install -e .
