@@ -26,6 +26,8 @@
         flex-direction: column;
       }
 
+
+
       nav{
         flex-grow: 1;
         margin-bottom: 0;
@@ -34,12 +36,12 @@
       main{
         flex-grow: 28;
         display: flex;
+        width: 100%;
         flex-direction: row;
         align-items: stretch;
       }
 
       .card{
-        width: 250px;
         margin: 2px;
       }
 
@@ -82,8 +84,69 @@
     </div>
 
     <main class="row">
-    
+      <!-- Albums Column -->
+      <div class="col s4 m3" style="display: flex; flex-direction: column;">
+        <h6>Albums</h6>
+        <div style="overflow-y: scroll; flex: 1;">
+          <!-- Repeatable Album Card -->
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p><strong>Album</strong></p>
+                <p>Artist</p><br>
+                <a class="btn-small waves-effect purple">View</a>
+              </div>
+            </div>
+            <div class="card-image">
+              <img src="https://weblabs.web.app/api/brainrot/1.webp" alt="Album Cover">
+            </div>
+          </div>
+          <!-- End Repeat -->
+        </div>
+      </div>
+  
+      <!-- Tracks Column -->
+      <div class="col s4 m5" style="display: flex; flex-direction: column;">
+        <h6>Selected Album Tracks</h6>
+        <div style="overflow-y: scroll; flex: 1;">
+          <!-- Repeatable Track Card -->
+          <div class="card">
+            <div class="card-content">
+              <span>Track Title - x comments</span>
+              <a class="btn-small right waves-effect purple lighten-1">View Comments ></a>
+            </div>
+          </div>
+          <!-- End Repeat -->
+        </div>
+      </div>
+  
+      <!-- Comments Column -->
+      <div class="col s4 m4" style="display: flex; flex-direction: column;">
+        <h6>Selected Track Comments</h6>
+        <!-- Comment Form -->
+        <form class="row" style="margin-bottom: 0;">
+          <div class="input-field col s9">
+            <input type="text" id="comment" placeholder="Placeholder">
+            <label for="comment">Comment</label>
+          </div>
+          <div class="col s3" style="display: flex; align-items: center;">
+            <button class="btn waves-effect purple waves-light" type="submit">Add</button>
+          </div>
+        </form>
+        <!-- Comments List -->
+        <div style="overflow-y: scroll; flex: 1;">
+          <ul class="collection">
+            <!-- Repeatable Comment -->
+            <li class="collection-item">
+              Text
+              <a href="#!" class="secondary-content"><i class="material-icons">delete</i></a>
+            </li>
+            <!-- End Repeat -->
+          </ul>
+        </div>
+      </div>
     </main>
+    
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script> M.AutoInit(); </script>
